@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd 
 import streamlit as st
-from utils.reader_config import config_reader 
-from models.models_collection import ModelRandomForest
+from utils.config_reader import config_reader 
+#from models.models_collection import ModelRandomForest
 import pickle
 import os
 from sklearn import preprocessing  
@@ -13,20 +13,19 @@ from sklearn.model_selection import train_test_split
 config = config_reader('config/config.json')
 
 # loading saved model
-with open(os.path.join(config.model_path, 'model_rf_opt.pkl'), 'rb') as f:
-    rf_model = pickle.load(f)
+with open(os.path.join(config.model_path, 'model_rf.pkl'), 'rb') as f:
+    model_rf = pickle.load(f)
     
-genders_dict = {"Male": 1, "Female" : 0}
   
 st.write("""
-# This app predicts customer status!
+# This app predicts hotel rating!
 """)
 
 
 st.sidebar.header('User Input Parameters')
 
 
-def user_input_features(rf=rf_model):
+def user_input_features(rf=model_rf):
     """The function generates local web page where a user can predict given data
     """
     
