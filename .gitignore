@@ -1,6 +1,5 @@
-# Byte-compiled / optimized / DLL files
+# Ignore folders
 __pycache__/
-
 
 # Distribution / packaging
 .Python
@@ -13,3 +12,5 @@ lib64/
 
 data/hotels.zip
 data/submission.zip
+
+project-3_v3_ru.ipynb
