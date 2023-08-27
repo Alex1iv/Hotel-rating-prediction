@@ -12,8 +12,10 @@ lib64/
 
 data/hotels.zip
 data/submission.zip
+submission_alex_1.zip
 
 project-3_v3_ru.ipynb
+Hotel_ratings_en.ipynb
 
 # Models
 *.pkl
